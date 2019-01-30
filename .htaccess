@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteRule ^uploaded/(\w+)/?$ uploaded.php?filecode=$1
+RewriteRule ^error/(\w+)/?$ error.php?error=$1
+RewriteRule ^download/(\w+)/?$ download.php?filecode=$1
+RewriteRule ^check-stats/?$ check-stats.php
+RewriteRule ^stats/(\w+)/?$ stats.php?statscode=$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* error/404/ [L]

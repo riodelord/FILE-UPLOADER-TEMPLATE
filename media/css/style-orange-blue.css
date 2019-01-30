@@ -1,0 +1,201 @@
+/**
+ * Filex
+ *
+ * @package    Filex
+ * @author     (Sourcegeek) SGLancer - http://sglancer.com
+ * @copyright  Copyright (c) 2015 SGLancer - All rights reserved.
+ * @license    Commercial
+ * @link       http://sglancer.com
+ *  
+ * All rights reserved to SGLancer.
+ *
+**/
+
+
+/*========================
+  General Styles
+==========================*/
+span.active { color:#50be6f; }
+span.warning { color:#bc3737; }
+button.btn-success { background-color:#eb7966; border-bottom:6px solid #c46657 !important; }
+button.btn-success:hover {
+	border:none;
+	border-color:#b75e50 !important;
+	background-color:#f9806c;
+}
+
+
+
+/*========================
+  Navbar
+==========================*/
+.navbar { background-color:#eb7966; }
+.nav>li>a { color:#fbe4e0; }
+.nav>li.active>a { color:#FFF; }
+.nav>li>a:hover {
+	background-color:transparent;
+	color:#FFF;
+}
+.navbar-toggle {
+	border-color:#eee;
+	color:#eee;
+}
+.navbar-toggle span.icon-bar { background-color:#fff; }
+.navbar-toggle:hover { border-color:#fff; }
+.navbar-toggle:hover span.icon-bar { background-color:#fff; }
+.collapsing, .collapse.in {
+	background-color:#f47e6a;
+	border-top:2px solid #e27562 !important;
+}
+
+
+
+/*========================
+  First container (Drop File Section)
+==========================*/
+section.first-container .over-container { background-color:transparent; }
+section.first-container .over-container.dotted {
+	border:8px dotted #e5e5e5;
+	background-color:#f5f5f5;
+}
+section.first-container:hover { background-color:#f8f8f8; }
+section.first-container:hover .left-icon { color:#bbb; }
+section.first-container:hover .right-text { color:#777; }
+section.first-container .left-icon { color:#d5d5d5; }
+section.first-container .left-icon.light { color:#e0e0e0; }
+section.first-container .left-icon i.fa-upload { color:#d5d5d5; }
+section.first-container .left-icon i.fa-exclamation-triangle { color:#d56868; }
+section.first-container .right-text { color:#999; }
+section.first-container .right-text.light { color:#ccc; }
+section.first-container .right-text .loader { background-color:#eee; }
+section.first-container .right-text .loader .fill { background-color:#6ee273; }
+
+
+
+/*========================
+  Second container (Upload Options)
+==========================*/
+section.second-container { background-color:#f9c8bf; }
+section.second-container .head {
+	background-color:#eb7966;
+	border-bottom:6px solid #b75e50;
+	color:#FFF;
+}
+section.second-container button.upload {
+	background-color:#eb7966;
+	border:none;
+	border-bottom:6px solid #c46657;
+}
+section.second-container button.upload:hover {
+	border:none;
+	border-bottom:6px solid #b75e50;
+	background-color:#f9806c;
+}
+
+
+
+/*========================
+  Third container (Site Information)
+==========================*/
+section.information { background-color:#2d3b4f; }
+section.information .column { color:#a0a0a0; }
+
+
+
+/*========================
+  Ads Section
+==========================*/
+section.ads { background-color:#37465c; }
+
+
+
+/*========================
+  Footer Section
+==========================*/
+footer { background-color:#161f2b; }
+footer p { color:#656565; }
+
+
+
+/*========================
+  Fourth Container (Upload Success)
+==========================*/
+section.fourth-container .success { color:#53d778; }
+
+section.fourth-container .download .input input.link {
+	border:4px solid #f6e9e5;
+	background-color:#fff6f4;
+	color:#999;
+}
+section.fourth-container .download .input input.link:hover,
+section.fourth-container .download .input input.link:focus {
+	background-color:#FFF;
+}
+section.fourth-container .download .input button {
+	border:none;
+	border-bottom:6px solid #b75e50;
+	color:#FFF;
+	background-color:#eb7966;
+}
+section.fourth-container .download .input button:hover {
+	background-color:#f9806c;
+	border-color:#c46657;
+}
+section.fourth-container p.small { color:#aaa; }
+
+
+
+/*========================
+  Fifth Container (Share Links)
+==========================*/
+section.fifth-container { color:#ddd; }
+section.fifth-container .row .col-xs-4 a { color:#ddd; }
+section.fifth-container .row .col-xs-4 a:hover { color:#bbb; }
+
+
+
+/*========================
+  Sixth Container (Stats)
+==========================*/
+section.sixth-container .row.first { color:#999; }
+section.sixth-container .row.first strong { color:#555; }
+#tooltip{
+    border:1px solid #000;
+	background-color:#111;
+	color:#FFF;
+}
+.row.expiration .middle-col .bar { background-color:#eee; }
+.row.expiration .middle-col .bar .fill { background-color:#35b459; }
+
+
+
+/*========================
+  Sixth Container (Graph Styling)
+==========================*/
+.graph-head span.head { background-color:#f5f5f5; }
+.graph-head span.head.blue:after { background-color:#4a88ba; }
+.graph-head span.head.green:after { background-color:#35b459; }
+.graph-head span.head.red:after { background-color:#bc3737; }
+.graph h3 { color:#555; }
+.graph h3:after { background-color:#eee; }
+
+
+
+/*========================
+  Sixth Container (Stats)
+==========================*/
+section.seventh-container .input input.password {
+	border:4px solid #eee;
+	background-color:#FFF;
+	color:#999;
+}
+section.seventh-container .input input.password:hover,
+section.seventh-container .input input.password:focus {
+	background-color:#fafafa;
+}
+section.seventh-container .input button {
+	border:none;
+	border-bottom:6px solid #248740;
+	color:#FFF;
+	background-color:#35b459;
+}

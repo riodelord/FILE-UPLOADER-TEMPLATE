@@ -1,0 +1,42 @@
+.col-md-12 .col-md-12 {
+	margin-top:10px;
+}
+span.small {
+	font-size:0.9em;
+	font-style:italic;
+	font-weight:300;
+	color:#777;
+}
+.general-wrapper .content {
+	width:650px;
+	max-width:96%;
+	margin:30px auto 20px auto;
+}
+
+.row#header .col {
+	color:#FFF;
+	margin:0 0 -20px 0;
+	z-index:99999;
+}
+.row#header .col .text {
+	background-color:#3f7197;
+	padding:10px 0;
+	font-size:1.6em;
+	text-align:center;
+	font-family:Open Sans;
+}
+
+p.info {
+	font-family:Open Sans;
+	font-weight:400;
+}
+p.bg-danger {
+	margin-top:20px;
+}
+p.bg-success {
+	margin-top:20px;
+}
+
+.cont a {
+	color:#FFF;
+}

@@ -1,0 +1,985 @@
+/**
+ * Filex
+ *
+ * @package    Filex
+ * @author     (Sourcegeek) SGLancer - http://sglancer.com
+ * @copyright  Copyright (c) 2015 SGLancer - All rights reserved.
+ * @license    Commercial
+ * @link       http://sglancer.com
+ *  
+ * All rights reserved to SGLancer.
+ *
+**/
+
+
+/*========================
+  Sections
+  
+	1.	General Styles
+	2.	General Transitions
+	3.	Navbar
+	4.	First Container (Drop File Section)
+			4.1 CSS3 Animations
+			4.2 Styling
+			4.3 Media Queries
+	5.	Second Container (Upload Options)
+			5.1 Styling
+			5.2 Media Queries
+	6.	Third Container (Site Information)
+			6.1 Styling
+			6.2 Media Queries
+	7.	Ads Section
+	8.	Footer Section
+	9.	Fourth Container (Upload Success)
+			9.1 CSS3 Animations
+			9.2 Styling
+			9.3 Media Queries
+	10.	Fifth Container (Misc)
+			10.1 CSS3 Animations
+			10.2 Styling
+	11.	Sixth Container (Stats)
+			11.1 Styling
+			11.2 Media Queries
+	12.	Sixth Container (Graph Styling)
+			12.1 Styling
+			12.2 Media Queries
+	13.	Seventh Container (Password)
+			13.1 Styling
+			13.2 Media Queries
+	14. Eighth Container (Error)
+			14.1 Styling
+	15. Check Stats Container
+			13.1 Styling
+			13.2 Media Queries
+==========================*/
+	
+	
+/*========================
+  General Styles
+==========================*/
+* { outline:none; }
+h2 { padding:0; font-family:Montserrat; font-size:40px; line-height:20px;}
+button.btn-success {
+	border:none;
+	border-bottom:6px solid #248740;
+	font-family:Montserrat;
+	font-size:1.1em;
+	padding:8px 40px;
+	margin-top:10px;
+}
+button.btn-success:hover {
+	border:none;
+}
+
+
+/*========================
+  General Transitions
+==========================*/
+.nav>li>a,
+section.second-container button.upload,
+section.fourth-container .download .input input.link,
+section.fourth-container .download .input button,
+section.fifth-container .row .col-sm-4 a{
+	transition:0.1s all linear;
+	-webkit-transition:0.1s all linear;
+	-moz-transition:0.1s all linear;
+	-o-transition:0.1s all linear;
+}
+section.first-container,
+section.first-container .left-icon,
+section.first-container .right-text,
+section.second-container .inner-col,
+section.second-container .inner-col .inner-dropdown,
+.graph-head a:hover {
+	transition:0.2s all linear;
+	-webkit-transition:0.2s all linear;
+	-moz-transition:0.2s all linear;
+	-o-transition:0.2s all linear;
+}
+
+
+/*========================
+  Navbar
+==========================*/
+.navbar {
+	height:70px;
+	font-family:Montserrat;
+	margin-bottom:15px;
+}
+.navbar-static-top {
+	z-index:9999999;
+}
+.navbar .navbar-brand img {
+	margin-top:4px;
+}
+@media(max-width:700px) {
+	.navbar .navbar-brand img {
+		height:120%;
+		margin-top:8px;
+	}
+}
+.nav>li>a {
+	padding:0;
+	margin:24px 50px;
+	font-size:1.2em;
+	letter-spacing:-0.05em;
+}
+.navbar-toggle {
+	margin-top:17px;
+}
+.navbar-collapse {
+	box-shadow:none;
+	-webkit-box-shadow:none;
+	border-top:none;
+}
+
+.collapsing, .collapse.in {
+	margin-top:10px;
+	z-index:99999999999;
+}
+
+
+/*========================
+  First container (Drop File Section)
+  
+  First Section: CSS3 Animations
+  Second Section: Styling
+  Third Section: Media Queries
+==========================*/
+@keyframes glow {
+	from {
+		-webkit-transform: translateY(-20px);
+		transform:translateY(-20px);
+		color:#6ee273;
+	}
+	to {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+		color:#d5d5d5;
+	}
+}
+@-webkit-keyframes glow {
+	from {
+		-webkit-transform: translateY(-20px);
+		transform:translateY(-20px);
+		color:#6ee273;
+	}
+	to {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+		color:#d5d5d5;
+	}
+}
+
+section.first-container {
+	border-radius:6px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	margin-bottom:15px;
+	padding:0;
+}
+section.first-container .row {
+	position:relative;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+section.first-container .over-container {
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:9999;
+	opacity:0.5;
+}
+section.first-container .over-container:hover {
+	cursor:pointer;
+}
+section.first-container:hover {
+	cursor:pointer;
+}
+section.first-container .left-icon, section.first-container .right-text {
+	float:none;
+	display:table-cell;
+	vertical-align:middle;
+	height:300px;
+}
+section.first-container .left-icon {
+	font-size:10em;
+	text-align:center;
+	text-align:right;
+	width:30% !important;
+}
+section.first-container .left-icon i.fa-upload.glow {
+	-webkit-animation:glow 0.8s ease-in-out;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-iteration-count:infinite;
+	animation:glow 0.8s ease-in-out;
+	animation-direction:alternate;
+	animation-iteration-count:infinite;
+}
+section.first-container .right-text {
+	font-family:Roboto;
+	font-weight:200;
+	font-size:3.5em;
+	letter-spacing:-0.05em;
+	line-height:1.3em;
+	word-break:normal;
+}
+section.first-container .right-text p.filename {
+	word-break:break-all;
+}
+section.first-container .right-text.warning {
+	font-size:2.5em;
+	word-break:normal;
+}
+section.first-container .right-text .loader {
+	width:100%;
+	height:5px;
+}
+section.first-container .right-text .loader .fill {
+	width:0%;
+	height:5px;
+	display:block;
+}
+
+@media(max-width:767px) {
+	section.first-container{ width:96%; font-size:10px; }
+	section.first-container .left-icon { font-size:8em; }
+}
+@media(min-width:768px) { section.first-container{ width:600px; } }
+@media(min-width:992px) { section.first-container{ width:700px; } }
+@media(min-width:1200px) { section.first-container{ width:800px; } }
+
+
+
+/*========================
+  Second container (Upload Options)
+  
+  First Section: Styling
+  Second Section: Media Queries
+==========================*/
+section.second-container .row {
+	margin:40px auto 30px auto;
+}
+section.second-container .column {
+	padding:0 11px;
+}
+section.second-container .head {
+	font-size:1.4em;
+	letter-spacing:-0.02em;
+	font-family:Roboto;
+	font-weight:300;
+	width:100%;
+	padding:10px 10px;
+	padding:20px 15px 10px 15px;
+	display:block;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+}
+section.second-container .column input {
+	width:40px;
+	display:inline-block;
+	padding:0 5px;
+	height:28px;
+	margin:auto 5px;
+}
+section.second-container .column input.big {
+	width:95%;
+	margin-bottom:10px;
+}
+section.second-container button.upload {
+	font-family:Montserrat;
+	font-size:1.1em;
+	padding:8px 40px;
+	margin:0 10px 40px auto;
+}
+
+@media(max-width:690px) {
+	section.second-container { padding:0; }
+	section.second-container .container {
+		width:100%;
+		padding:0;
+		margin:0;
+	}
+	section.second-container .column:nth-child(1),
+	section.second-container .column:nth-child(2) {
+		width:50%;
+		margin-bottom:30px;
+	}
+	section.second-container .column:nth-child(3) { width:100%; }
+}
+@media(max-width:440px) {
+	section.second-container .column:nth-child(1),
+	section.second-container .column:nth-child(2),
+	section.second-container .column:nth-child(3) {
+		width:100%;
+		margin-bottom:20px;
+	}
+}
+@media(max-width:992px) {
+	section.second-container .head { font-size:1.2em; }
+}
+
+
+
+
+/*========================
+  Third container (Site Information)
+  
+  First Section: Styling
+  Second Section: Media Queries
+==========================*/
+section.information {
+	padding:0;
+}
+section.information .column {
+	font-family:Open Sans;
+	font-size:1.7em;
+	letter-spacing:-0.02em;
+	font-weight:100;
+	padding:30px 0;
+}
+
+@media(max-width:990px) {
+	section.information .column { font-size:1.5em; }
+}
+@media(max-width:900px) {
+	section.information .column { font-size:1.3em; }
+}
+@media(max-width:800px) {
+	section.information .column { font-size:1.1em; }
+}
+@media(max-width:600px) {
+	section.information .column { font-size:0.9em; }
+}
+
+
+
+/*========================
+  Ads Section
+==========================*/
+section.ads {
+	padding:15px 0;
+	width:100%;
+}
+
+
+
+/*========================
+  Footer Section
+==========================*/
+footer {
+	min-height:250px;
+	position:relative;
+}
+footer p {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:5px;
+	font-size:0.8em;
+}
+
+
+
+/*========================
+  Fourth Container (Upload Success)
+  
+  First Section: CSS3 Animations
+  Second Section: Styling
+  Third Section: Media Queries
+==========================*/
+@-webkit-keyframes success {
+	from {
+		-webkit-transform: translateY(-300px);
+		transform: translateY(-300px);
+		opacity:0;
+	}
+	to {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+		opacity:1;
+	}
+}
+@keyframes success {
+	from {
+		-webkit-transform: translateY(-300px);
+		transform: translateY(-300px);
+		opacity:0;
+	}
+	to {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+		opacity:1;
+	}
+}
+@-webkit-keyframes zoom {
+	0% {
+		transform: scale(1);
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+	}
+	50% {
+		transform: scale(2);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-o-transform: scale(2);
+		-ms-transform: scale(2);
+	}
+	100% {
+		transform: scale(1);
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+	}
+}
+@keyframes zoom {
+	0% {
+		transform: scale(0);
+		-moz-transform: scale(0);
+		-webkit-transform: scale(0);
+		-o-transform: scale(0);
+		-ms-transform: scale(0);
+	}
+	50% {
+		transform: scale(2);
+		-moz-transform: scale(2);
+		-webkit-transform: scale(2);
+		-o-transform: scale(2);
+		-ms-transform: scale(2);
+	}
+	100% {
+		transform: scale(0);
+		-moz-transform: scale(0);
+		-webkit-transform: scale(0);
+		-o-transform: scale(0);
+		-ms-transform: scale(0);
+	}
+}
+
+section.fourth-container {
+	padding:0 5px;
+	margin-bottom:100px;
+}
+section.fourth-container .success {
+	width:100%;
+}
+section.fourth-container .success i {
+	font-size:7.5em;
+	display:inline-block;
+	vertical-align:middle;
+}
+section.fourth-container .success p {
+	font-size:3.5em;
+	font-weight:200;
+	font-family:Roboto;
+	display:inline-block;
+	vertical-align:middle;
+	padding:20px 0 0 10px;
+}
+section.fourth-container .download {
+	margin:50px auto;
+	width:100%;
+}
+section.fourth-container .download span {
+	font-size:1.2em;
+	font-weight:600;
+}
+section.fourth-container .download .input {
+	width:100%;
+}
+section.fourth-container .download .input input.link {
+	width:77%;
+	display:inline-block;
+	margin-right:0;
+	padding:8px 10px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	font-size:1.15em;
+	font-weight:300;
+	font-family:Roboto;
+}
+section.fourth-container .download .input button {
+	min-width:20%;
+	display:inline-block;
+	height:44px;
+	font-size:1.2em;
+	font-family:Montserrat;
+	vertical-align:middle;
+	padding:8px 10px 10px 10px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+}
+section.fourth-container .download .input button i {
+	font-size:1.4em;
+	vertical-align:middle;
+	margin-right:8px;
+}
+section.fourth-container p.small {
+	font-size:0.835em;
+	margin-top:3px;
+}
+section.fourth-container .download {
+	-webkit-transform: translateY(-300px);
+	transform: translateY(-300px);
+	opacity:0;
+}
+section.fourth-container .download.animate-first {
+	-webkit-animation:success 0.3s linear 1500ms;
+	-webkit-animation-fill-mode:forwards;
+	animation:success 0.3s linear 1500ms;
+	animation-fill-mode:forwards;
+}
+section.fourth-container .download.animate-second{
+	-webkit-animation:success 0.3s linear 2500ms;
+	-webkit-animation-fill-mode:forwards;
+	animation:success 0.3s linear 2500ms;
+	animation-fill-mode:forwards;
+}
+section.fourth-container .success i {
+	-webkit-animation:zoom 0.8s linear 1500ms;
+	-webkit-animation-fill-mode:forwards;
+	animation:zoom 0.8s linear 1500ms;
+	animation-fill-mode:forwards;
+}
+
+@media(max-width:767px) {
+	section.fourth-container{ width:98% !important; }
+	section.fourth-container .success i { font-size:5.5em !important; }
+	section.fourth-container .success p { font-size:2.5em !important; }
+	section.fourth-container .download .input button {
+		padding:10px 6px 6px 6px !important;
+		font-size:0.96em !important;
+	}
+	section.fourth-container .download .input button i { font-size:1.4em !important; }
+}
+@media(max-width:600px) {
+	section.fourth-container .download .input input.link { width:65% !important; }
+	section.fourth-container .download .input button { min-width:30% !important; }
+	section.fifth-container .row .col-xs-4 { font-size:4em !important; }
+	section.fifth-container { width:70% !important; }
+	section.fourth-container .success i {
+		font-size:5.2em !important;
+		margin-bottom:-30px;
+	}
+	section.fourth-container .success p { font-size:2.2em !important; }
+	section.fourth-container .download { margin:40px auto !important; }
+	section.fifth-container { margin:0px auto 50px auto !important; }
+}
+@media(max-width:420px) {
+	section.fourth-container .download .input button {
+		padding:10px 6px 6px 6px !important;
+		font-size:0.8em !important;
+	}
+	section.fourth-container .download .input button i { font-size:1.2em !important; }
+}
+@media(min-width:768px) {
+	section.fourth-container{ width:600px !important; }
+	section.fourth-container .success i { font-size:7em !important; }
+	section.fourth-container .success p { font-size:3em !important; }
+	section.fourth-container .download .input button {
+		padding:10px 10px 6px 10px !important;
+		font-size:1em !important;
+	}
+	section.fourth-container .download .input button i { font-size:1.5em !important; }
+}
+@media(min-width:992px) {
+	section.fourth-container{ width:700px !important; }
+	section.fourth-container .success i { font-size:7em !important; }
+	section.fourth-container .success p { font-size:3em !important; }	
+	section.fourth-container .download .input button {
+		padding:10px 10px 6px 10px !important;
+		font-size:1em !important;
+	}
+	section.fourth-container .download .input button i { font-size:1.5em !important; }
+}
+@media(min-width:1200px) { section.fourth-container{ width:900px !important; } }
+
+
+
+
+
+/*========================
+  Fifth Container (Misc)
+  
+  First Section: CSS3 Animations
+  Second Section: Styling
+==========================*/
+@-webkit-keyframes social {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+@keyframes social {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+section.fifth-container {
+	width:500px;
+	margin:30px auto 50px auto;
+	color:#ddd;
+}
+section.fifth-container .row .col-xs-4 {
+	font-size:5em;
+}
+section.fifth-container .col-xs-4 {
+	opacity:0;
+}
+section.fifth-container .col-xs-4.animate-first {
+	-webkit-animation:social 0.3s linear 3000ms;
+	-webkit-animation-fill-mode:forwards;
+	animation:social 0.5s linear 3000ms;
+	animation-fill-mode:forwards;
+}
+section.fifth-container .col-xs-4.animate-second {
+	-webkit-animation:social 0.3s linear 3500ms;
+	-webkit-animation-fill-mode:forwards;
+	animation:social 0.4s linear 3500ms;
+	animation-fill-mode:forwards;
+}
+section.fifth-container .col-xs-4.animate-third {
+	-webkit-animation:social 0.3s linear 4000ms;
+	-webkit-animation-fill-mode:forwards;
+	animation:social 0.5s linear 4000ms;
+	animation-fill-mode:forwards;
+}
+
+
+
+/*========================
+  Sixth Container (Stats)
+  
+  First Section: Styling
+  Second Section: Media Queries
+==========================*/
+section.sixth-container {
+	padding:0 !important;
+}
+section.sixth-container span.active,
+section.sixth-container span.warning,
+section.sixth-container span.danger {
+	font-family:Montserrat;
+	font-size:1.2em;
+}
+section.sixth-container span.active { color:#5cb85c; }
+section.sixth-container span.warning { color:#f0ad4e; }
+section.sixth-container span.danger { color:#d9534f; }
+
+section.sixth-container .row.first {
+	font-size:1.1em;
+	font-family:Open Sans;
+	font-weight:400 !important;
+}
+section.sixth-container .row {
+	margin-right:0 !important;
+}
+#tooltip{
+    position:absolute;
+    display:none;
+    padding:5px 10px;
+	opacity:0.7;
+	z-index:9999;
+	font-family:Roboto;
+	font-size:0.8em;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.tickLabel {
+	font-size:1em;
+}
+.row.expiration {
+	margin-bottom:50px;
+}
+.row.expiration .col {
+	width:20% !important;
+	padding:2px 10px;
+	margin:0;
+	font-family:Montserrat;
+}
+.row.expiration .middle-col {
+	width:60% !important;
+	height:25px;
+	padding:0;
+	margin:0;
+}
+.row.expiration .middle-col .bar {
+	width:100%;
+	height:100%;
+	background-color:#eee;
+}
+.row.expiration .middle-col .bar .fill {
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+@media(max-width:767px) { section.sixth-container{ width:98%; } }
+@media(min-width:768px) { section.sixth-container{ width:750px; } }
+@media(min-width:992px) { section.sixth-container{ width:850px; } }
+@media(min-width:1200px) { section.sixth-container{ width:950px; } }
+
+
+
+/*========================
+  Sixth Container (Graph Styling)
+  
+  First Section: Styling
+  Second Section: Media Queries
+==========================*/
+.graph {
+	margin:70px auto 100px auto;
+}
+.graph-head {
+	margin-bottom:0px;
+}
+.graph-head span.head {
+	display:block;
+	padding:5px 20px 8px 20px;
+	float:left;
+	margin-right:8px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	font-family:Montserrat;
+}
+.graph-head span.head.blue:after {
+	content:" ";
+	display:block;
+	width:110%;
+	margin-left:-5%;
+	margin-top:3px;
+	height:3px;
+}
+.graph-head span.head.green:after {
+	content:" ";
+	display:block;
+	width:110%;
+	margin-left:-5%;
+	margin-top:3px;
+	height:3px;
+}
+.graph-head span.head.red:after {
+	content:" ";
+	display:block;
+	width:110%;
+	margin-left:-5%;
+	margin-top:3px;
+	height:3px;
+}
+.graph h3 {
+	font-size:30px;
+	margin-bottom:10px;
+}
+.graph h3:after {
+	content:" ";
+	display:block;
+	width:100%;
+	height:2px;
+	margin-top:3px;
+}
+.tickLabel span.responsive-label { display:none; }
+
+@media(max-width:630px) {
+	.graph .graph-head span {
+		font-size:12px;
+		margin-bottom:10px;
+	}
+}
+@media(max-width:610px) {
+	.graph .graph-head span { font-size:10px; }
+	.tickLabel { font-size:11px; }
+	.tickLabel span.responsive-label { display: block; }
+	.tickLabel span.normal-label { display:none; }
+	
+	.row.expiration .col {
+		font-size:12px;
+		width:22% !important;
+	}
+	.row.expiration .middle-col {
+		width:54% !important;
+	}
+}
+
+
+
+/*========================
+  Seventh Container (Password)
+  
+  First Section: Styling
+  Second Section: Media Queries
+==========================*/
+section.seventh-container {
+	text-align:center;
+	padding:100px 0px 200px 0px;
+}
+section.seventh-container .row {
+	margin:auto;
+	width:100%;
+	max-width:700px;
+}
+section.seventh-container p.big {
+	font-size:2.5em;
+	font-weight:600;
+	text-align:left;
+	width:96%;
+	margin:auto;
+	display:block;
+	color:#555;
+	line-height:1em;
+}
+section.seventh-container p.medium {
+	font-size:1.5em;
+	font-family:Open Sans;
+	font-weight:300;
+	width:96%;
+	margin:auto;
+	display:block;
+	color:#555;
+	text-align:left;
+	margin-bottom:15px;
+}
+section.seventh-container p.bg-danger {
+	width:96%;
+	margin:-8px auto 12px auto;
+	display:block;
+	padding:6px 15px;
+	background-color:#e78282;
+	color:#FFF;
+}
+section.seventh-container .input {
+	width:100%;
+}
+section.seventh-container .input input.password {
+	width:73%;
+	display:inline-block;
+	margin-right:0;
+	padding:5px 10px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	font-size:1.15em;
+	font-weight:300;
+	font-family:Roboto;
+}
+section.seventh-container .input button {
+	min-width:23%;
+	display:inline-block;
+	height:37px;
+	margin-top:-4px;
+	font-size:1.1em;
+	font-family:Montserrat;
+	vertical-align:middle;
+	padding:5px 10px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+}
+@media(max-width:670px) {
+	section.seventh-container .input button {
+		font-size:0.95em;
+	}
+}
+@media(max-width:490px) {
+	section.seventh-container .input input.password {
+		width:66%;
+	}
+	section.seventh-container .input button {
+		min-width:30%;
+		font-size:0.85em;
+	}
+}
+
+
+/*========================
+  Eighth Container (Error)
+  
+  First Section: Styling
+==========================*/
+section.eighth-container {
+	text-align:center;
+	padding:100px 0px 200px 0px;
+}
+section.eighth-container .row {
+	margin:auto;
+	width:100%;
+	max-width:700px;
+}
+section.eighth-container p.big {
+	font-size:2.5em;
+	font-weight:600;
+	text-align:left;
+	width:96%;
+	margin:auto;
+	display:block;
+	color:#555;
+	line-height:1em;
+}
+section.eighth-container p.medium {
+	font-size:1.9em;
+	font-family:Open Sans;
+	font-weight:300;
+	width:96%;
+	margin:auto;
+	display:block;
+	color:#777;
+	text-align:left;
+	margin-bottom:15px;
+}
+
+
+
+/*========================
+  Check Stats Container
+  
+  First Section: Styling
+  Second Section: Media Queries
+==========================*/
+section.check-stats {
+	width:800px;
+	padding:60px 0 140px 0;
+}
+section.check-stats p.big {
+	font-size:2.5em;
+	font-weight:600;
+	text-align:left;
+	margin:0;
+	color:#555;
+	line-height:1em;
+}
+section.check-stats p.medium {
+	font-size:1.9em;
+	font-family:Open Sans;
+	font-weight:300;
+	color:#777;
+	text-align:left;
+	margin-bottom:15px;
+}
+section.check-stats p.bg-danger {
+	width:100%;
+	margin:-8px auto 12px auto;
+	display:block;
+	padding:6px 15px;
+	background-color:#e78282;
+	color:#FFF;
+	text-align:center;
+}
+
+@media(max-width:810px) { section.check-stats { width:700px; }
+@media(max-width:710px) { section.check-stats { width:550px; } }
+@media(max-width:560px) { section.check-stats { width:96%; margin-left:2%;} }
