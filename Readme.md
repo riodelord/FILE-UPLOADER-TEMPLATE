@@ -14,5 +14,3 @@ demo admin panel
 "FILE UPLOADER TEMPLATE Preview")
 **[Template Demo](https://colorlib.com/polygon/gentelella/index.html)**
 
-## Documentation
-
