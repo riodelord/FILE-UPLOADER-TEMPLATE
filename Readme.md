@@ -1,41 +1,18 @@
-Template
-========
+# gentelella
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+Gentelella Admin is a free to use Bootstrap admin template.
+This template uses the default Bootstrap 3 styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards.
 
-Look how easy it is to use:
+Theme uses several libraries for charts, calendar, form validation, wizard style interface, off-canvas navigation menu, text forms, date range, upload area, form autocomplete, range slider, progress bars, notifications and much more.
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+We would love to see how you use this awesome admin template. You can notify us about your site, app or service by tweeting to [@colorlib](https://twitter.com/colorlib). Once the list will grown long enough we will write a post similar to [this](https://colorlib.com/wp/avada-theme-examples/) to showcase the best examples.
 
-Features
---------
 
-- Be awesome
-- Make things faster
+## Theme Demo
+![Gentelella Bootstrap Admin Template](https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/gentelella-admin-template-preview.jpg 
+"Gentelella Theme Browser Preview")
 
-Installation
-------------
+**[Template Demo](https://colorlib.com/polygon/gentelella/index.html)**
 
-Install $project by running:
+## Documentation
 
-    install project
-
-Contribute
-----------
-
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
-
-License
--------
-
-The project is licensed under the BSD license.
